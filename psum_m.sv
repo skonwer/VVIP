@@ -82,34 +82,69 @@ assign read_address     = read_address_q;
 
 // Logic for selecting bank
 integer i;
-reg [BANK_INDEX_WIDTH-1:0] idx;  // Index register to hold current bank index (avoids slicing issues)
-
+//reg [BANK_INDEX_WIDTH-1:0] idx;  // Index register to hold current bank index (avoids slicing issues)
+//
+//always @(*) begin
+//    // Default: no available bank found
+//    free_bank_index = {BANK_INDEX_WIDTH{1'b1}};  // all 1's = invalid index sentinel
+//    bank_available  = 1'b0;
+//    idx             = {BANK_INDEX_WIDTH{1'b0}}; 
+//
+//    if (need_small_bank) begin
+//        // indices 0 to SMALL_BANK_COUNT-1
+//        for (i = 0; i < SMALL_BANK_COUNT; i = i + 1) begin
+//            idx = i; 
+//            if (!bank_valid[idx] && !bank_available) begin
+//                free_bank_index = idx;
+//                bank_available  = 1'b1;
+//            end
+//        end
+//    end else begin
+//        // indices SMALL_BANK_COUNT to TOTAL_BANK_COUNT-1
+//        for (i = SMALL_BANK_COUNT; i < TOTAL_BANK_COUNT; i = i + 1) begin
+//            idx = i;
+//            if (!bank_valid[idx] && !bank_available) begin
+//                free_bank_index = idx;
+//                bank_available  = 1'b1;
+//            end
+//        end
+//    end
+//end
 always @(*) begin
-    // Default: no available bank found
-    free_bank_index = {BANK_INDEX_WIDTH{1'b1}};  // all 1's = invalid index sentinel
-    bank_available  = 1'b0;
-    idx             = {BANK_INDEX_WIDTH{1'b0}}; 
-
-    if (need_small_bank) begin
-        // indices 0 to SMALL_BANK_COUNT-1
-        for (i = 0; i < SMALL_BANK_COUNT; i = i + 1) begin
-            idx = i; 
-            if (!bank_valid[idx] && !bank_available) begin
-                free_bank_index = idx;
+        free_bank_index = 3'b111;   // default "none" (out of range index)
+        bank_available  = 1'b0;
+        if (need_small_bank) begin
+            // Search small bank 0..2 for a free one
+            if (!bank_valid[0]) begin
+                free_bank_index = 3'd0;
                 bank_available  = 1'b1;
+            end else if (!bank_valid[1]) begin
+                free_bank_index = 3'd1;
+                bank_available  = 1'b1;
+            end else if (!bank_valid[2]) begin
+                free_bank_index = 3'd2;
+                bank_available  = 1'b1;
+            end else begin
+                // no small bank free
+                bank_available  = 1'b0;
             end
-        end
-    end else begin
-        // indices SMALL_BANK_COUNT to TOTAL_BANK_COUNT-1
-        for (i = SMALL_BANK_COUNT; i < TOTAL_BANK_COUNT; i = i + 1) begin
-            idx = i;
-            if (!bank_valid[idx] && !bank_available) begin
-                free_bank_index = idx;
+        end else begin
+            // Search big bank 3..5 for a free one
+            if (!bank_valid[3]) begin
+                free_bank_index = 3'd3;
                 bank_available  = 1'b1;
+            end else if (!bank_valid[4]) begin
+                free_bank_index = 3'd4;
+                bank_available  = 1'b1;
+            end else if (!bank_valid[5]) begin
+                free_bank_index = 3'd5;
+                bank_available  = 1'b1;
+            end else begin
+                // no big bank free
+                bank_available  = 1'b0;
             end
         end
     end
-end
 
 // address incrementor
 
