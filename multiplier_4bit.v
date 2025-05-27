@@ -526,27 +526,27 @@ module multiplier(b, o, a);
   \multiplier.final_adder  final_adder (
     .\port$0$3 (a[1]),
     .\port$0$5 (a[3]),
-    .\port$106$0 (c),
-    .\port$107$0 (s),
-    .\port$108$0 (\c$78 ),
-    .\port$109$0 (\s$85 ),
-    .\port$110$0 (\c$79 ),
-    .\port$111$0 (\s$86 ),
-    .\port$112$0 (\c$80 ),
-    .\port$113$0 (\s$87 ),
-    .\port$114$0 (\c$81 ),
-    .\port$115$0 (\s$88 ),
-    .\port$117$0 (\s$89 ),
-    .\port$50$0 (\$12 ),
-    .\port$51$0 (\$13 ),
-    .\port$52$0 (\$14 ),
-    .\port$53$0 (\$15 ),
-    .\port$54$0 (\$16 ),
-    .\port$55$0 (\$17 ),
-    .\port$56$0 (\$18 ),
-    .\port$57$0 (\$19 ),
-    .\port$64$0 (pp_row0_0),
-    .\port$66$0 (pp_row1_0)
+    .\port$122$0 (c),
+    .\port$123$0 (s),
+    .\port$124$0 (\c$78 ),
+    .\port$125$0 (\s$85 ),
+    .\port$126$0 (\c$79 ),
+    .\port$127$0 (\s$86 ),
+    .\port$128$0 (\c$80 ),
+    .\port$129$0 (\s$87 ),
+    .\port$130$0 (\c$81 ),
+    .\port$131$0 (\s$88 ),
+    .\port$133$0 (\s$89 ),
+    .\port$66$0 (\$12 ),
+    .\port$67$0 (\$13 ),
+    .\port$68$0 (\$14 ),
+    .\port$69$0 (\$15 ),
+    .\port$70$0 (\$16 ),
+    .\port$71$0 (\$17 ),
+    .\port$72$0 (\$18 ),
+    .\port$73$0 (\$19 ),
+    .\port$80$0 (pp_row0_0),
+    .\port$82$0 (pp_row1_0)
   );
   assign a_registered = a;
   assign b_registered = b;
@@ -611,10 +611,13 @@ module multiplier(b, o, a);
   assign o = { \$19 , \$18 , \$17 , \$16 , \$15 , \$14 , \$13 , \$12  };
 endmodule
 
-module \multiplier.final_adder (\port$0$5 , \port$50$0 , \port$51$0 , \port$52$0 , \port$53$0 , \port$54$0 , \port$55$0 , \port$56$0 , \port$57$0 , \port$64$0 , \port$66$0 , \port$106$0 , \port$107$0 , \port$108$0 , \port$109$0 , \port$110$0 , \port$111$0 , \port$112$0 , \port$113$0 , \port$114$0 , \port$115$0 
-, \port$117$0 , \port$0$3 );
+module \multiplier.final_adder (\port$0$5 , \port$66$0 , \port$67$0 , \port$68$0 , \port$69$0 , \port$70$0 , \port$71$0 , \port$72$0 , \port$73$0 , \port$80$0 , \port$82$0 , \port$122$0 , \port$123$0 , \port$124$0 , \port$125$0 , \port$126$0 , \port$127$0 , \port$128$0 , \port$129$0 , \port$130$0 , \port$131$0 
+, \port$133$0 , \port$0$3 );
   wire \$1 ;
   wire \$10 ;
+  wire \$11 ;
+  wire \$12 ;
+  wire \$13 ;
   wire \$2 ;
   wire \$3 ;
   wire \$4 ;
@@ -663,12 +666,18 @@ module \multiplier.final_adder (\port$0$5 , \port$50$0 , \port$51$0 , \port$52$0
   wire \g_new$50 ;
   wire \g_new$53 ;
   wire \g_new$54 ;
-  wire \g_new$57 ;
+  wire \g_new$56 ;
   wire \g_new$58 ;
-  wire \g_new$59 ;
   wire \g_new$60 ;
-  wire \g_new$61 ;
-  wire \g_new$62 ;
+  wire \g_new$63 ;
+  wire \g_new$64 ;
+  wire \g_new$67 ;
+  wire \g_new$68 ;
+  wire \g_new$70 ;
+  wire \g_new$72 ;
+  wire \g_new$73 ;
+  wire \g_new$74 ;
+  wire \g_new$75 ;
   wire [7:0] o;
   wire [7:0] \o$22 ;
   wire [7:0] o2;
@@ -677,53 +686,60 @@ module \multiplier.final_adder (\port$0$5 , \port$50$0 , \port$51$0 , \port$52$0
   wire \p_new$51 ;
   wire \p_new$52 ;
   wire \p_new$55 ;
-  wire \p_new$56 ;
+  wire \p_new$57 ;
+  wire \p_new$59 ;
+  wire \p_new$61 ;
+  wire \p_new$62 ;
+  wire \p_new$65 ;
+  wire \p_new$66 ;
+  wire \p_new$69 ;
+  wire \p_new$71 ;
   input \port$0$3 ;
   wire \port$0$3 ;
   input \port$0$5 ;
   wire \port$0$5 ;
-  input \port$106$0 ;
-  wire \port$106$0 ;
-  input \port$107$0 ;
-  wire \port$107$0 ;
-  input \port$108$0 ;
-  wire \port$108$0 ;
-  input \port$109$0 ;
-  wire \port$109$0 ;
-  input \port$110$0 ;
-  wire \port$110$0 ;
-  input \port$111$0 ;
-  wire \port$111$0 ;
-  input \port$112$0 ;
-  wire \port$112$0 ;
-  input \port$113$0 ;
-  wire \port$113$0 ;
-  input \port$114$0 ;
-  wire \port$114$0 ;
-  input \port$115$0 ;
-  wire \port$115$0 ;
-  input \port$117$0 ;
-  wire \port$117$0 ;
-  output \port$50$0 ;
-  wire \port$50$0 ;
-  output \port$51$0 ;
-  wire \port$51$0 ;
-  output \port$52$0 ;
-  wire \port$52$0 ;
-  output \port$53$0 ;
-  wire \port$53$0 ;
-  output \port$54$0 ;
-  wire \port$54$0 ;
-  output \port$55$0 ;
-  wire \port$55$0 ;
-  output \port$56$0 ;
-  wire \port$56$0 ;
-  output \port$57$0 ;
-  wire \port$57$0 ;
-  input \port$64$0 ;
-  wire \port$64$0 ;
-  input \port$66$0 ;
+  input \port$122$0 ;
+  wire \port$122$0 ;
+  input \port$123$0 ;
+  wire \port$123$0 ;
+  input \port$124$0 ;
+  wire \port$124$0 ;
+  input \port$125$0 ;
+  wire \port$125$0 ;
+  input \port$126$0 ;
+  wire \port$126$0 ;
+  input \port$127$0 ;
+  wire \port$127$0 ;
+  input \port$128$0 ;
+  wire \port$128$0 ;
+  input \port$129$0 ;
+  wire \port$129$0 ;
+  input \port$130$0 ;
+  wire \port$130$0 ;
+  input \port$131$0 ;
+  wire \port$131$0 ;
+  input \port$133$0 ;
+  wire \port$133$0 ;
+  output \port$66$0 ;
   wire \port$66$0 ;
+  output \port$67$0 ;
+  wire \port$67$0 ;
+  output \port$68$0 ;
+  wire \port$68$0 ;
+  output \port$69$0 ;
+  wire \port$69$0 ;
+  output \port$70$0 ;
+  wire \port$70$0 ;
+  output \port$71$0 ;
+  wire \port$71$0 ;
+  output \port$72$0 ;
+  wire \port$72$0 ;
+  output \port$73$0 ;
+  wire \port$73$0 ;
+  input \port$80$0 ;
+  wire \port$80$0 ;
+  input \port$82$0 ;
+  wire \port$82$0 ;
   wire sn;
   wire \sn$26 ;
   wire \sn$28 ;
@@ -733,60 +749,60 @@ module \multiplier.final_adder (\port$0$5 , \port$50$0 , \port$51$0 , \port$52$0
   wire \sn$36 ;
   wire \sn$38 ;
   HAxp5_ASAP7_75t_R \U$0  (
-    .A(\port$64$0 ),
+    .A(\port$80$0 ),
     .B(\port$0$3 ),
     .CON(con),
     .SN(sn)
   );
   INVx1_ASAP7_75t_R \U$1  (
     .A(con),
-    .Y(\$signal$39 )
+    .Y(\$signal$46 )
   );
   INVx1_ASAP7_75t_R \U$10  (
     .A(\con$29 ),
-    .Y(\$signal$42 )
+    .Y(\$signal$43 )
   );
   INVx1_ASAP7_75t_R \U$11  (
     .A(\sn$30 ),
     .Y(\$signal$10 )
   );
   HAxp5_ASAP7_75t_R \U$12  (
-    .A(\port$108$0 ),
-    .B(\port$111$0 ),
+    .A(\port$124$0 ),
+    .B(\port$127$0 ),
     .CON(\con$31 ),
     .SN(\sn$32 )
   );
   INVx1_ASAP7_75t_R \U$13  (
     .A(\con$31 ),
-    .Y(\$signal$43 )
+    .Y(\$signal$42 )
   );
   INVx1_ASAP7_75t_R \U$14  (
     .A(\sn$32 ),
     .Y(\$signal$12 )
   );
   HAxp5_ASAP7_75t_R \U$15  (
-    .A(\port$110$0 ),
-    .B(\port$113$0 ),
+    .A(\port$126$0 ),
+    .B(\port$129$0 ),
     .CON(\con$33 ),
     .SN(\sn$34 )
   );
   INVx1_ASAP7_75t_R \U$16  (
     .A(\con$33 ),
-    .Y(\$signal$44 )
+    .Y(\$signal$41 )
   );
   INVx1_ASAP7_75t_R \U$17  (
     .A(\sn$34 ),
     .Y(\$signal$14 )
   );
   HAxp5_ASAP7_75t_R \U$18  (
-    .A(\port$112$0 ),
-    .B(\port$115$0 ),
+    .A(\port$128$0 ),
+    .B(\port$131$0 ),
     .CON(\con$35 ),
     .SN(\sn$36 )
   );
   INVx1_ASAP7_75t_R \U$19  (
     .A(\con$35 ),
-    .Y(\$signal$45 )
+    .Y(\$signal$39 )
   );
   INVx1_ASAP7_75t_R \U$2  (
     .A(sn),
@@ -797,198 +813,284 @@ module \multiplier.final_adder (\port$0$5 , \port$50$0 , \port$51$0 , \port$52$0
     .Y(\$signal$16 )
   );
   HAxp5_ASAP7_75t_R \U$21  (
-    .A(\port$114$0 ),
-    .B(\port$117$0 ),
+    .A(\port$130$0 ),
+    .B(\port$133$0 ),
     .CON(\con$37 ),
     .SN(\sn$38 )
   );
   INVx1_ASAP7_75t_R \U$22  (
     .A(\con$37 ),
-    .Y(\$signal$46 )
+    .Y(\$signal$40 )
   );
   INVx1_ASAP7_75t_R \U$23  (
     .A(\sn$38 ),
     .Y(\$signal$18 )
   );
   AND2x2_ASAP7_75t_R \U$24  (
-    .A(\$signal$6 ),
-    .B(\$signal ),
+    .A(\$signal$16 ),
+    .B(\$signal$18 ),
     .Y(\p_new$48 )
   );
   AO21x1_ASAP7_75t_R \U$25  (
-    .A1(\$signal$6 ),
+    .A1(\$signal$18 ),
     .A2(\$signal$39 ),
     .B(\$signal$40 ),
-    .Y(g_new)
-  );
-  AND2x2_ASAP7_75t_R \U$26  (
-    .A(\$signal$10 ),
-    .B(\$signal$8 ),
-    .Y(p_new)
-  );
-  AO21x1_ASAP7_75t_R \U$27  (
-    .A1(\$signal$10 ),
-    .A2(\$signal$41 ),
-    .B(\$signal$42 ),
     .Y(\g_new$50 )
   );
-  AND2x2_ASAP7_75t_R \U$28  (
+  AND2x2_ASAP7_75t_R \U$26  (
     .A(\$signal$14 ),
-    .B(\$signal$12 ),
+    .B(\$signal$16 ),
     .Y(\p_new$52 )
+  );
+  AO21x1_ASAP7_75t_R \U$27  (
+    .A1(\$signal$16 ),
+    .A2(\$signal$41 ),
+    .B(\$signal$39 ),
+    .Y(\g_new$54 )
+  );
+  AND2x2_ASAP7_75t_R \U$28  (
+    .A(\$signal$12 ),
+    .B(\$signal$14 ),
+    .Y(p_new)
   );
   AO21x1_ASAP7_75t_R \U$29  (
     .A1(\$signal$14 ),
-    .A2(\$signal$43 ),
-    .B(\$signal$44 ),
-    .Y(\g_new$53 )
+    .A2(\$signal$42 ),
+    .B(\$signal$41 ),
+    .Y(g_new)
   );
   HAxp5_ASAP7_75t_R \U$3  (
-    .A(\port$66$0 ),
+    .A(\port$82$0 ),
     .B(1'h0),
     .CON(\con$25 ),
     .SN(\sn$26 )
   );
   AND2x2_ASAP7_75t_R \U$30  (
-    .A(\$signal$18 ),
-    .B(\$signal$16 ),
+    .A(\$signal$10 ),
+    .B(\$signal$12 ),
     .Y(\p_new$51 )
   );
   AO21x1_ASAP7_75t_R \U$31  (
-    .A1(\$signal$18 ),
-    .A2(\$signal$45 ),
-    .B(\$signal$46 ),
-    .Y(\g_new$54 )
+    .A1(\$signal$12 ),
+    .A2(\$signal$43 ),
+    .B(\$signal$42 ),
+    .Y(\g_new$53 )
   );
   AND2x2_ASAP7_75t_R \U$32  (
-    .A(p_new),
-    .B(\p_new$48 ),
-    .Y(\p_new$56 )
-  );
-  AO21x1_ASAP7_75t_R \U$33  (
-    .A1(p_new),
-    .A2(g_new),
-    .B(\g_new$50 ),
-    .Y(\g_new$57 )
-  );
-  AND2x2_ASAP7_75t_R \U$34  (
-    .A(\p_new$51 ),
-    .B(\p_new$52 ),
+    .A(\$signal$8 ),
+    .B(\$signal$10 ),
     .Y(\p_new$55 )
   );
+  AO21x1_ASAP7_75t_R \U$33  (
+    .A1(\$signal$10 ),
+    .A2(\$signal$44 ),
+    .B(\$signal$43 ),
+    .Y(\g_new$56 )
+  );
+  AND2x2_ASAP7_75t_R \U$34  (
+    .A(\$signal$6 ),
+    .B(\$signal$8 ),
+    .Y(\p_new$57 )
+  );
   AO21x1_ASAP7_75t_R \U$35  (
-    .A1(\p_new$51 ),
-    .A2(\g_new$53 ),
-    .B(\g_new$54 ),
+    .A1(\$signal$8 ),
+    .A2(\$signal$45 ),
+    .B(\$signal$44 ),
     .Y(\g_new$58 )
   );
   AND2x2_ASAP7_75t_R \U$36  (
-    .A(\p_new$55 ),
-    .B(\p_new$56 ),
-    .Y(\$1 )
+    .A(\$signal ),
+    .B(\$signal$6 ),
+    .Y(\p_new$59 )
   );
   AO21x1_ASAP7_75t_R \U$37  (
-    .A1(\p_new$55 ),
-    .A2(\g_new$57 ),
-    .B(\g_new$58 ),
-    .Y(\$2 )
+    .A1(\$signal$6 ),
+    .A2(\$signal$46 ),
+    .B(\$signal$45 ),
+    .Y(\g_new$60 )
   );
-  AO21x1_ASAP7_75t_R \U$38  (
-    .A1(\p_new$52 ),
-    .A2(\g_new$57 ),
-    .B(\g_new$53 ),
-    .Y(\g_new$59 )
+  AND2x2_ASAP7_75t_R \U$38  (
+    .A(p_new),
+    .B(\p_new$48 ),
+    .Y(\p_new$62 )
   );
   AO21x1_ASAP7_75t_R \U$39  (
-    .A1(\$signal$8 ),
+    .A1(\p_new$48 ),
     .A2(g_new),
-    .B(\$signal$41 ),
-    .Y(\g_new$60 )
+    .B(\g_new$50 ),
+    .Y(\g_new$64 )
   );
   INVx1_ASAP7_75t_R \U$4  (
     .A(\con$25 ),
-    .Y(\$signal$40 )
+    .Y(\$signal$45 )
   );
-  AO21x1_ASAP7_75t_R \U$40  (
-    .A1(\$signal$12 ),
-    .A2(\g_new$57 ),
-    .B(\$signal$43 ),
-    .Y(\g_new$61 )
+  AND2x2_ASAP7_75t_R \U$40  (
+    .A(\p_new$51 ),
+    .B(\p_new$52 ),
+    .Y(\p_new$66 )
   );
   AO21x1_ASAP7_75t_R \U$41  (
-    .A1(\$signal$16 ),
-    .A2(\g_new$59 ),
-    .B(\$signal$45 ),
-    .Y(\g_new$62 )
+    .A1(\p_new$52 ),
+    .A2(\g_new$53 ),
+    .B(\g_new$54 ),
+    .Y(\g_new$68 )
   );
-  XOR2x1_ASAP7_75t_R \U$42  (
-    .A(\$signal ),
-    .B(1'h0),
-    .Y(\$3 )
+  AND2x2_ASAP7_75t_R \U$42  (
+    .A(\p_new$55 ),
+    .B(p_new),
+    .Y(\p_new$69 )
   );
-  XOR2x1_ASAP7_75t_R \U$43  (
-    .A(\$signal$6 ),
-    .B(\$signal$39 ),
-    .Y(\$4 )
-  );
-  XOR2x1_ASAP7_75t_R \U$44  (
-    .A(\$signal$8 ),
+  AO21x1_ASAP7_75t_R \U$43  (
+    .A1(p_new),
+    .A2(\g_new$56 ),
     .B(g_new),
-    .Y(\$5 )
+    .Y(\g_new$70 )
   );
-  XOR2x1_ASAP7_75t_R \U$45  (
-    .A(\$signal$10 ),
-    .B(\g_new$60 ),
-    .Y(\$6 )
+  AND2x2_ASAP7_75t_R \U$44  (
+    .A(\p_new$57 ),
+    .B(\p_new$51 ),
+    .Y(\p_new$71 )
   );
-  XOR2x1_ASAP7_75t_R \U$46  (
-    .A(\$signal$12 ),
-    .B(\g_new$57 ),
-    .Y(\$7 )
+  AO21x1_ASAP7_75t_R \U$45  (
+    .A1(\p_new$51 ),
+    .A2(\g_new$58 ),
+    .B(\g_new$53 ),
+    .Y(\g_new$72 )
   );
-  XOR2x1_ASAP7_75t_R \U$47  (
-    .A(\$signal$14 ),
-    .B(\g_new$61 ),
-    .Y(\$8 )
+  AND2x2_ASAP7_75t_R \U$46  (
+    .A(\p_new$59 ),
+    .B(\p_new$55 ),
+    .Y(\p_new$61 )
   );
-  XOR2x1_ASAP7_75t_R \U$48  (
-    .A(\$signal$16 ),
-    .B(\g_new$59 ),
-    .Y(\$9 )
+  AO21x1_ASAP7_75t_R \U$47  (
+    .A1(\p_new$55 ),
+    .A2(\g_new$60 ),
+    .B(\g_new$56 ),
+    .Y(\g_new$63 )
   );
-  XOR2x1_ASAP7_75t_R \U$49  (
-    .A(\$signal$18 ),
-    .B(\g_new$62 ),
-    .Y(\$10 )
+  AND2x2_ASAP7_75t_R \U$48  (
+    .A(\$signal ),
+    .B(\p_new$57 ),
+    .Y(\p_new$65 )
+  );
+  AO21x1_ASAP7_75t_R \U$49  (
+    .A1(\p_new$57 ),
+    .A2(\$signal$46 ),
+    .B(\g_new$58 ),
+    .Y(\g_new$67 )
   );
   INVx1_ASAP7_75t_R \U$5  (
     .A(\sn$26 ),
     .Y(\$signal$6 )
   );
+  AND2x2_ASAP7_75t_R \U$50  (
+    .A(\p_new$61 ),
+    .B(\p_new$62 ),
+    .Y(\$1 )
+  );
+  AO21x1_ASAP7_75t_R \U$51  (
+    .A1(\p_new$62 ),
+    .A2(\g_new$63 ),
+    .B(\g_new$64 ),
+    .Y(\$2 )
+  );
+  AND2x2_ASAP7_75t_R \U$52  (
+    .A(\p_new$65 ),
+    .B(\p_new$66 ),
+    .Y(\$3 )
+  );
+  AO21x1_ASAP7_75t_R \U$53  (
+    .A1(\p_new$66 ),
+    .A2(\g_new$67 ),
+    .B(\g_new$68 ),
+    .Y(\g_new$75 )
+  );
+  AND2x2_ASAP7_75t_R \U$54  (
+    .A(\p_new$59 ),
+    .B(\p_new$69 ),
+    .Y(\$4 )
+  );
+  AO21x1_ASAP7_75t_R \U$55  (
+    .A1(\p_new$69 ),
+    .A2(\g_new$60 ),
+    .B(\g_new$70 ),
+    .Y(\g_new$74 )
+  );
+  AND2x2_ASAP7_75t_R \U$56  (
+    .A(\$signal ),
+    .B(\p_new$71 ),
+    .Y(\$5 )
+  );
+  AO21x1_ASAP7_75t_R \U$57  (
+    .A1(\p_new$71 ),
+    .A2(\$signal$46 ),
+    .B(\g_new$72 ),
+    .Y(\g_new$73 )
+  );
+  XOR2x1_ASAP7_75t_R \U$58  (
+    .A(\$signal ),
+    .B(1'h0),
+    .Y(\$6 )
+  );
+  XOR2x1_ASAP7_75t_R \U$59  (
+    .A(\$signal$6 ),
+    .B(\$signal$46 ),
+    .Y(\$7 )
+  );
   HAxp5_ASAP7_75t_R \U$6  (
     .A(\port$0$5 ),
-    .B(\port$107$0 ),
+    .B(\port$123$0 ),
     .CON(\con$27 ),
     .SN(\sn$28 )
   );
+  XOR2x1_ASAP7_75t_R \U$60  (
+    .A(\$signal$8 ),
+    .B(\g_new$60 ),
+    .Y(\$8 )
+  );
+  XOR2x1_ASAP7_75t_R \U$61  (
+    .A(\$signal$10 ),
+    .B(\g_new$67 ),
+    .Y(\$9 )
+  );
+  XOR2x1_ASAP7_75t_R \U$62  (
+    .A(\$signal$12 ),
+    .B(\g_new$63 ),
+    .Y(\$10 )
+  );
+  XOR2x1_ASAP7_75t_R \U$63  (
+    .A(\$signal$14 ),
+    .B(\g_new$73 ),
+    .Y(\$11 )
+  );
+  XOR2x1_ASAP7_75t_R \U$64  (
+    .A(\$signal$16 ),
+    .B(\g_new$74 ),
+    .Y(\$12 )
+  );
+  XOR2x1_ASAP7_75t_R \U$65  (
+    .A(\$signal$18 ),
+    .B(\g_new$75 ),
+    .Y(\$13 )
+  );
   INVx1_ASAP7_75t_R \U$7  (
     .A(\con$27 ),
-    .Y(\$signal$41 )
+    .Y(\$signal$44 )
   );
   INVx1_ASAP7_75t_R \U$8  (
     .A(\sn$28 ),
     .Y(\$signal$8 )
   );
   HAxp5_ASAP7_75t_R \U$9  (
-    .A(\port$106$0 ),
-    .B(\port$109$0 ),
+    .A(\port$122$0 ),
+    .B(\port$125$0 ),
     .CON(\con$29 ),
     .SN(\sn$30 )
   );
-  assign a = { \port$114$0 , \port$112$0 , \port$110$0 , \port$108$0 , \port$106$0 , \port$0$5 , \port$66$0 , \port$64$0  };
-  assign \a$1  = { \port$114$0 , \port$112$0 , \port$110$0 , \port$108$0 , \port$106$0 , \port$0$5 , \port$66$0 , \port$64$0  };
-  assign b = { \port$117$0 , \port$115$0 , \port$113$0 , \port$111$0 , \port$109$0 , \port$107$0 , 1'h0, \port$0$3  };
-  assign \b$3  = { \port$117$0 , \port$115$0 , \port$113$0 , \port$111$0 , \port$109$0 , \port$107$0 , 1'h0, \port$0$3  };
+  assign a = { \port$130$0 , \port$128$0 , \port$126$0 , \port$124$0 , \port$122$0 , \port$0$5 , \port$82$0 , \port$80$0  };
+  assign \a$1  = { \port$130$0 , \port$128$0 , \port$126$0 , \port$124$0 , \port$122$0 , \port$0$5 , \port$82$0 , \port$80$0  };
+  assign b = { \port$133$0 , \port$131$0 , \port$129$0 , \port$127$0 , \port$125$0 , \port$123$0 , 1'h0, \port$0$3  };
+  assign \b$3  = { \port$133$0 , \port$131$0 , \port$129$0 , \port$127$0 , \port$125$0 , \port$123$0 , 1'h0, \port$0$3  };
   assign \$signal$5  = \$signal ;
   assign \$signal$7  = \$signal$6 ;
   assign \$signal$9  = \$signal$8 ;
@@ -997,19 +1099,18 @@ module \multiplier.final_adder (\port$0$5 , \port$50$0 , \port$51$0 , \port$52$0
   assign \$signal$15  = \$signal$14 ;
   assign \$signal$17  = \$signal$16 ;
   assign \$signal$19  = \$signal$18 ;
-  assign o2 = { \$10 , \$9 , \$8 , \$7 , \$6 , \$5 , \$4 , \$3  };
-  assign o = { \$10 , \$9 , \$8 , \$7 , \$6 , \$5 , \$4 , \$3  };
-  assign \o$22  = { \$10 , \$9 , \$8 , \$7 , \$6 , \$5 , \$4 , \$3  };
-  assign \port$50$0  = \$3 ;
-  assign \port$51$0  = \$4 ;
-  assign \port$52$0  = \$5 ;
-  assign \port$53$0  = \$6 ;
-  assign \port$54$0  = \$7 ;
-  assign \port$55$0  = \$8 ;
-  assign \port$56$0  = \$9 ;
-  assign \port$57$0  = \$10 ;
+  assign o2 = { \$13 , \$12 , \$11 , \$10 , \$9 , \$8 , \$7 , \$6  };
+  assign o = { \$13 , \$12 , \$11 , \$10 , \$9 , \$8 , \$7 , \$6  };
+  assign \o$22  = { \$13 , \$12 , \$11 , \$10 , \$9 , \$8 , \$7 , \$6  };
+  assign \port$66$0  = \$6 ;
+  assign \port$67$0  = \$7 ;
+  assign \port$68$0  = \$8 ;
+  assign \port$69$0  = \$9 ;
+  assign \port$70$0  = \$10 ;
+  assign \port$71$0  = \$11 ;
+  assign \port$72$0  = \$12 ;
+  assign \port$73$0  = \$13 ;
 endmodule
-
 
 
 module AND2x2_ASAP7_75t_R (Y, A, B);
