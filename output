@@ -1,0 +1,67 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x13c604a90 .scope module, "test" "test" 2 3;
+ .timescale 0 0;
+v0x600002638990_0 .var "a", 3 0;
+v0x600002638a20_0 .var "b", 3 0;
+v0x600002638ab0_0 .net "c", 7 0, L_0x6000025383c0;  1 drivers
+S_0x13c604c00 .scope module, "dut" "abc" 2 9, 2 29 0, S_0x13c604a90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 4 "b";
+    .port_info 2 /OUTPUT 8 "out";
+v0x600002638480_0 .net *"_ivl_1", 0 0, L_0x600002538000;  1 drivers
+v0x600002638510_0 .net/s *"_ivl_10", 7 0, L_0x600002538320;  1 drivers
+v0x6000026385a0_0 .net *"_ivl_2", 4 0, L_0x6000025380a0;  1 drivers
+v0x600002638630_0 .net/s *"_ivl_4", 7 0, L_0x600002538140;  1 drivers
+v0x6000026386c0_0 .net *"_ivl_7", 0 0, L_0x6000025381e0;  1 drivers
+v0x600002638750_0 .net *"_ivl_8", 4 0, L_0x600002538280;  1 drivers
+v0x6000026387e0_0 .net "a", 3 0, v0x600002638990_0;  1 drivers
+v0x600002638870_0 .net "b", 3 0, v0x600002638a20_0;  1 drivers
+v0x600002638900_0 .net/s "out", 7 0, L_0x6000025383c0;  alias, 1 drivers
+L_0x600002538000 .part v0x600002638990_0, 3, 1;
+L_0x6000025380a0 .concat [ 4 1 0 0], v0x600002638990_0, L_0x600002538000;
+L_0x600002538140 .extend/s 8, L_0x6000025380a0;
+L_0x6000025381e0 .part v0x600002638a20_0, 3, 1;
+L_0x600002538280 .concat [ 4 1 0 0], v0x600002638a20_0, L_0x6000025381e0;
+L_0x600002538320 .extend/s 8, L_0x600002538280;
+L_0x6000025383c0 .arith/mult 8, L_0x600002538140, L_0x600002538320;
+    .scope S_0x13c604a90;
+T_0 ;
+    %load/vec4 v0x600002638990_0;
+    %and/r;
+    %load/vec4 v0x600002638a20_0;
+    %and/r;
+    %load/vec4 v0x600002638ab0_0;
+    %and/r;
+    %vpi_call 2 18 "$monitor", "a = %b  b = %b. c = %b", S<2,vec4,u1>, S<1,vec4,u1>, S<0,vec4,u1> {3 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x600002638990_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x600002638a20_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v0x600002638990_0, 0, 4;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x600002638a20_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x600002638990_0, 0, 4;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x600002638a20_0, 0, 4;
+    %delay 5, 0;
+    %vpi_call 2 22 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/Users/konwer/Desktop/vvip_research/verilog/test.v";
